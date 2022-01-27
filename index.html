@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login | Take and Go</title>
+        <link rel="stylesheet" href="estilos/estilo.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400&family=Roboto+Slab&display=swap" rel="stylesheet"> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
+        <script src="js/showPass.js" defer></script>
+        <script src="js/user.js" defer></script>
+    </head>
+
+    <body>
+        <div class="banner">
+            <video autoplay>
+                <source src="estilos/video1.mp4" type="video/mp4">
+                <source src="estilos/video2.webm" type="video/webm">
+            </video>	
+            
+            <div id="login-container">
+                <img src="img/logo-take.svg" alt="Logo Take and Go" id="logo-take">
+                
+                <form action="">
+                    <h3>Login</h3>
+                    
+                    <input type="text" name="text" id="user" pattern="[\d]{11}|[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" placeholder="Seu e-mail ou CPF" autocomplete="off" required>
+
+                    <div id="pass">
+                        <input type="password" name="password" id="password" placeholder="Senha" maxlength="6" pattern="([0-9])"  required>
+                        <script>
+                            $(document).ready(function() {
+                                $("#password").keyup(function() {
+                                    $("#password").val(this.value.match(/[0-9]*/));
+                                });
+                            });
+                        </script>
+
+                        <button type="button" id="btnEye" onclick="showPass()">
+                            <svg  width="25px" height="20x" viewBox="0 0 25 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path onclick="showPass()" id="eye" d="M12,4.5 C7,4.5 2.73,7.61 1,12 C2.73,16.39 7,19.5 12,19.5 C17,19.5 21.27,16.39 23,12 C21.27,7.61 17,4.5 12,4.5 Z M12,17 C9.24,17 7,14.76 7,12 C7,9.24 9.24,7 12,7 C14.76,7 17,9.24 17,12 C17,14.76 14.76,17 12,17 Z M12,9 C10.34,9 9,10.34 9,12 C9,13.66 10.34,15 12,15 C13.66,15 15,13.66 15,12 C15,10.34 13.66,9 12,9 Z" id="🔹-Icon-Color" fill="#1D1D1D"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div id="reset-pass">
+                        <a href="#" id="forgot-pass">Esqueceu a senha?</a>
+                    </div>
+                    
+                    <div id="btnEntrar">
+                        <input id="button" type="submit" value="Entrar">
+                    </div>
+
+                </form>
+                
+                <div id="inferior">
+                    <div id="cadastro">
+                        <ul>
+                            <li><p>Não tem conta?</p></li>
+                            <li><a href="#" id="criar-cadastro">Criar cadastro</a></li>
+                        </ul>
+                    </div>
+                    <div id="login-fail">
+                        <ul>
+                            <li><p>Problema com o acesso?</p></li>
+                            <li><a href="#" id="criar-cadastro">Solicite ajuda</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>

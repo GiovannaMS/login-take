@@ -1,0 +1,186 @@
+/* Geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Muli,Helvetica Neue,Arial,sans-serif;
+    background-color: #ffffff;
+    border: none;
+}
+
+.banner {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: -1000;
+  }
+  .banner video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+  }
+
+body {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+textarea:focus, input:focus {
+    outline: none;
+}
+
+a {
+    font-size: .8rem;
+    color: #191919;
+}
+
+a:hover {
+    color:#ffb200;
+}
+
+/* Container Login */
+
+#login-container{
+    width: 60vh;
+    height: 80vh;
+    background-color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    box-shadow: 0 0 1em rgb(204, 204, 204);
+    border-radius: 20px;
+    border-color:  rgb(173, 173, 173);
+    padding: 20px 30px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* Imagens */
+
+#logo-take{
+    max-width: 130px;
+    max-height: 70px;
+    margin-top: 10px;
+}
+
+svg{
+    z-index: -1;
+    position: relative;
+}
+
+#btnEye svg{
+    margin-top: -12px;
+    margin-left: -10px;
+    background-color: transparent;
+}
+
+#btnEye svg:active{
+    margin-top: -12px;
+    margin-left: -10px;
+    background-color: transparent;
+}
+
+#eye {
+    fill: rgb(133, 131, 131);
+}
+
+/* Form */
+
+form {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+h4 {
+    margin-bottom: 10px;
+}
+
+input{
+    display: block;
+    width: 100%;
+    border: 1px solid rgb(133, 131, 131);
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: small;
+}
+
+input:focus{
+    border: solid .1rem #191919;
+}
+
+input:hover{
+    box-shadow: 0 0 1em rgb(219, 219, 219);
+}
+
+#btnEye:hover{
+    box-shadow: none;
+}
+
+p {
+    font-size: small;
+}
+
+ul li p{
+    padding-top: 2px;
+}
+
+#button {
+    background-color: #ffb200;
+    font-weight: bold;
+    border: 0;
+    border-radius: 20px;
+}
+
+#button:hover {
+    box-shadow: 0 0 1em rgb(207, 207, 207);
+}
+
+#btnEye {
+    width: 40px;
+    border: transparent;
+    background-color: transparent;
+    margin-left: -43px;
+    z-index: 5;
+    position: relative;
+}
+
+#reset-pass {
+    text-align: right;
+    margin-bottom: 7px;
+}
+
+#pass {
+    display: flex;
+    align-items: center;
+}
+
+#cadastro ul{
+    margin-top: 20px;
+    list-style: none;
+    display: inline-flex;
+}
+
+#cadastro ul li{
+    margin-right: 5px;
+}
+
+#login-fail ul{
+    margin-top: 40px;
+    list-style: none;
+    display: inline-flex;
+}
+
+#login-fail ul li{
+    margin-right: 5px;
+}
