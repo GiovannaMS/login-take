@@ -22,25 +22,25 @@
             </video>	
             
             <div id="login-container">
-                <img src="img/logo-take.svg" alt="Logo Take and Go" id="logo-take">
+                <img src="img/logo-social.png" alt="Logo Empresa" id="logo"> <!--Logo do site/empresa-->
                 
                 <form action="">
                     <h3>Login</h3>
                     
-                    <input type="text" name="text" id="user" pattern="[\d]{11}|[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" placeholder="Seu e-mail ou CPF" autocomplete="off" required>
+                    <input type="text" name="text" id="user" placeholder="Seu CPF" autocomplete="off" required>
                     <script>
                         $(document).ready(function () { 
                             var $cpf = $("#user");
-                            $cpf.mask('000.000.000-00');
+                            $cpf.mask('000.000.000-00'); //máscara para colocar os números no formato de CPF
                         });
                     </script>
 
                     <div id="pass">
-                        <input type="password" name="password" id="password" placeholder="Senha" maxlength="6" pattern="([0-9])" required>
+                        <input type="password" name="password" id="password" placeholder="Senha numérica" maxlength="8" required> <!--senha de 8 dígitos-->
                         <script>
                             $(document).ready(function() {
                                 $("#password").keyup(function() {
-                                    $("#password").val(this.value.match(/[0-9]*/));
+                                    $("#password").val(this.value.match(/[0-9]*/)); //senha aceita somente números
                                 });
                             });
                         </script>
